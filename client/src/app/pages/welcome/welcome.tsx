@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 export const Welcome = () => (
   <section className="welcome">
@@ -8,7 +9,9 @@ export const Welcome = () => (
 
     <div className="welcome__content">
       <p>Tutaj pójdzie przykładowy tekst powitalny.</p>
-      <button>Przejdź do kalkulatora</button>
+      <Link to="/calculator">
+        <button >Przejdź do kalkulatora</button>
+      </Link>
     </div>
   </section>
 );

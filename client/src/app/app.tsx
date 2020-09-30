@@ -12,6 +12,9 @@ export const App: React.FunctionComponent = () => (
         <Route exact path="/">
           <Welcome />
         </Route>
+        <Route exact path="/calculator">
+          <h2>Kalkulator</h2>
+        </Route>
       </main>
     </div>
   </BrowserRouter>
