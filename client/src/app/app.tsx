@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Redirect, Route, Switch } from 'react-router-dom';
-import { Header } from './common/components/header/header';
+import { Header } from './common/components/header';
 import { Welcome } from './pages/welcome';
 
 export const App: React.FunctionComponent = () => (
