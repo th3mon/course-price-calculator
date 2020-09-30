@@ -1,12 +1,12 @@
 import React from 'react';
-// ! Zmień na dostarczone logo
-import logo from './logo.svg';
+import logo from './logo.png';
+import './app.scss';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+    <div className="app">
+      <header className="app-header">
+        <img src={logo} className="app-logo" alt="logo" />
       </header>
     </div>
   );
