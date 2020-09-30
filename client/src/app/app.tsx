@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter, Redirect, Route, Switch } from 'react-router-dom';
 import { Header } from './common/components/header';
 import { Welcome } from './pages/welcome';
+import { Calculator } from './pages/calculator';
 
 export const App: React.FunctionComponent = () => (
   <BrowserRouter>
@@ -14,7 +15,7 @@ export const App: React.FunctionComponent = () => (
             <Welcome />
           </Route>
           <Route exact path="/calculator">
-            <h2>Kalkulator</h2>
+            <Calculator />
           </Route>
         </Switch>
       </main>
