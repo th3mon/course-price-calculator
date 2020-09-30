@@ -1,0 +1,22 @@
+{
+  "name": "course-price-calculator",
+  "version": "1.0.0",
+  "description": "",
+  "devDependencies": {
+    "stylelint-declaration-block-no-ignored-properties": "^2.3.0",
+    "stylelint-order": "^4.1.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/th3mon/course-price-calculator.git"
+  },
+  "author": "Przemysław Szelenberger",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/th3mon/course-price-calculator/issues"
+  },
+  "homepage": "https://github.com/th3mon/course-price-calculator#readme"
+}
