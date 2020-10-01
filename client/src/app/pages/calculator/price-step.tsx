@@ -11,19 +11,7 @@ export interface Bonus {
   value: boolean;
 }
 
-export const renderStandardBonuses = (bonuses: Bonus[]) =>
-  bonuses.map(({ name, label }) => (
-    <Box key={name}>
-      <Field
-        name={name}
-        type="checkbox"
-        component={CheckboxWithLabel}
-        Label={{ label }}
-      />
-    </Box>
-  ));
-
-export const renderAdditionalBonuses = (bonuses: Bonus[]) =>
+export const renderBonuses = (bonuses: Bonus[]) =>
   bonuses.map(({ name, label }) => (
     <Box key={name}>
       <Field
@@ -51,7 +39,7 @@ export const PriceStep = (
         >
           Standardowe bonusy
         </Typography>
-        {renderStandardBonuses(standardBonuses)}
+        {renderBonuses(standardBonuses)}
       </Grid>
 
       <Grid item>
@@ -64,7 +52,7 @@ export const PriceStep = (
         >
           Dodatkowe bonusy
         </Typography>
-        {renderAdditionalBonuses(additionalBonuses)}
+        {renderBonuses(additionalBonuses)}
       </Grid>
     </Grid>
   </FormikStep>
