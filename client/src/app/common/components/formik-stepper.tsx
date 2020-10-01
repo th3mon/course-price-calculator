@@ -7,8 +7,10 @@ import {
   Grid,
   Button,
   CircularProgress,
+  CardContent,
+  Card,
 } from '@material-ui/core';
-import { Formik, Form, FormikConfig, FormikValues  } from 'formik';
+import { Formik, Form, FormikConfig, FormikValues } from 'formik';
 
 const sleep = (time: number): Promise<void> =>
   new Promise((resolve) => setTimeout(resolve, time));
@@ -65,36 +67,46 @@ export function FormikStepper({
               </Step>
             ))}
           </Stepper>
+          <Card
+            style={{
+              width: '50%',
+              margin: 'auto auto 50px',
+              boxShadow: '0 0 30px 0 rgba(0, 0, 0, 0.1)',
+              borderRadius: '25px',
+            }}
+          >
+            <CardContent>
+              {currentChild}
 
-          {currentChild}
-
-          <Grid container spacing={2}>
-            {step > 0 ? (
-              <Grid item>
-                <Button
-                  disabled={isSubmitting}
-                  variant="contained"
-                  color="primary"
-                  onClick={() => setStep((step) => step - 1)}
-                >
-                  Back
-                </Button>
+              <Grid container spacing={2}>
+                {step > 0 ? (
+                  <Grid item>
+                    <Button
+                      disabled={isSubmitting}
+                      variant="contained"
+                      color="primary"
+                      onClick={() => setStep((step) => step - 1)}
+                    >
+                      Back
+                    </Button>
+                  </Grid>
+                ) : null}
+                <Grid item>
+                  <Button
+                    startIcon={
+                      isSubmitting ? <CircularProgress size="1rem" /> : null
+                    }
+                    disabled={isSubmitting}
+                    variant="contained"
+                    color="primary"
+                    type="submit"
+                  >
+                    {isLastStep() ? 'Submit' : 'Next'}
+                  </Button>
+                </Grid>
               </Grid>
-            ) : null}
-            <Grid item>
-              <Button
-                startIcon={
-                  isSubmitting ? <CircularProgress size="1rem" /> : null
-                }
-                disabled={isSubmitting}
-                variant="contained"
-                color="primary"
-                type="submit"
-              >
-                {isLastStep() ? 'Submit' : 'Next'}
-              </Button>
-            </Grid>
-          </Grid>
+            </CardContent>
+          </Card>
         </Form>
       )}
     </Formik>

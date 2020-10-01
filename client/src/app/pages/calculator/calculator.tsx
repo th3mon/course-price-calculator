@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, CardContent, Typography } from '@material-ui/core';
+import { Box, Card, CardContent, Typography } from '@material-ui/core';
 import { Field } from 'formik';
 import { CheckboxWithLabel } from 'formik-material-ui';
 import {
@@ -28,32 +28,37 @@ const standardBonusesData = [
 
 const renderStandardBonuses = () =>
   standardBonusesData.map(({ name, label }) => (
-    <Field
-      key={name}
-      name={name}
-      type="checkbox"
-      component={CheckboxWithLabel}
-      Label={{ label }}
-    />
+    <Box key={name}>
+      <Field
+        name={name}
+        type="checkbox"
+        component={CheckboxWithLabel}
+        Label={{ label }}
+      />
+    </Box>
   ));
 
 export const Calculator: React.FunctionComponent = () => (
-  <Card>
-    <CardContent>
-      <FormikStepper
-        initialValues={{
-          bonus1: false,
-          bonus2: false,
-          bonus3: false,
-          bonus4: false,
+  <FormikStepper
+    initialValues={{
+      bonus1: false,
+      bonus2: false,
+      bonus3: false,
+      bonus4: false,
+    }}
+    onSubmit={() => {}}
+  >
+    <FormikStep label="Cena">
+      <Typography
+        variant="h2"
+        style={{
+          fontWeight: 'bold',
+          fontSize: '20px',
         }}
-        onSubmit={() => {}}
       >
-        <FormikStep label="Cena">
-          <Typography variant="h2">Standardowe bonusy</Typography>
-          {renderStandardBonuses()}
-        </FormikStep>
-      </FormikStepper>
-    </CardContent>
-  </Card>
+        Standardowe bonusy
+      </Typography>
+      {renderStandardBonuses()}
+    </FormikStep>
+  </FormikStepper>
 );
