@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Card, CardContent, Typography } from '@material-ui/core';
+import { Box, Card, CardContent, Grid, Typography } from '@material-ui/core';
 import { Field } from 'formik';
 import { CheckboxWithLabel } from 'formik-material-ui';
 import {
@@ -26,8 +26,39 @@ const standardBonusesData = [
   },
 ];
 
+const additionalBonusesData = [
+  {
+    name: 'bonus5',
+    label: 'Zamknięta grupa',
+  },
+  {
+    name: 'bonus6',
+    label: 'Webinary OnLine',
+  },
+  {
+    name: 'bonus7',
+    label: 'Cotygodniowe Q&A',
+  },
+  {
+    name: 'bonus8',
+    label: 'Support OnLine',
+  },
+];
+
 const renderStandardBonuses = () =>
   standardBonusesData.map(({ name, label }) => (
+    <Box key={name}>
+      <Field
+        name={name}
+        type="checkbox"
+        component={CheckboxWithLabel}
+        Label={{ label }}
+      />
+    </Box>
+  ));
+
+const renderAdditionalBonuses = () =>
+  additionalBonusesData.map(({ name, label }) => (
     <Box key={name}>
       <Field
         name={name}
@@ -45,20 +76,41 @@ export const Calculator: React.FunctionComponent = () => (
       bonus2: false,
       bonus3: false,
       bonus4: false,
+      bonus5: false,
+      bonus6: false,
+      bonus7: false,
+      bonus8: false,
     }}
     onSubmit={() => {}}
   >
     <FormikStep label="Cena">
-      <Typography
-        variant="h2"
-        style={{
-          fontWeight: 'bold',
-          fontSize: '20px',
-        }}
-      >
-        Standardowe bonusy
-      </Typography>
-      {renderStandardBonuses()}
+      <Grid container spacing={2}>
+        <Grid item>
+          <Typography
+            variant="h2"
+            style={{
+              fontWeight: 'bold',
+              fontSize: '20px',
+            }}
+          >
+            Standardowe bonusy
+          </Typography>
+          {renderStandardBonuses()}
+        </Grid>
+
+        <Grid item>
+          <Typography
+            variant="h2"
+            style={{
+              fontWeight: 'bold',
+              fontSize: '20px',
+            }}
+          >
+            Dodatkowe bonusy
+          </Typography>
+          {renderAdditionalBonuses()}
+        </Grid>
+      </Grid>
     </FormikStep>
   </FormikStepper>
 );
