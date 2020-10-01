@@ -4,13 +4,14 @@ import { FormikStepper } from '../../common/components/formik-stepper';
 import { Bonus, PriceStep } from './price-step';
 import { FormikValues } from 'formik';
 
-const convertBonusesToBonusInitialValues = (bonuses: Bonus[]): FormikValues => bonuses.reduce(
-  (obj: FormikValues, item: Bonus) => ({
-    ...obj,
-    [item.name]: item.value,
-  }),
-  {}
-);
+const convertBonusesToBonusInitialValues = (bonuses: Bonus[]): FormikValues =>
+  bonuses.reduce(
+    (obj: FormikValues, item: Bonus) => ({
+      ...obj,
+      [item.name]: item.value,
+    }),
+    {}
+  );
 
 export const Calculator: React.FunctionComponent = () => {
   const [standardBonuses, setStandardBonuses] = useState([]);
@@ -28,9 +29,11 @@ export const Calculator: React.FunctionComponent = () => {
     getData();
   }, []);
 
-
   useEffect(() => {
-    const initialValues = convertBonusesToBonusInitialValues([...standardBonuses, ...additionalBonuses]);
+    const initialValues = convertBonusesToBonusInitialValues([
+      ...standardBonuses,
+      ...additionalBonuses,
+    ]);
 
     setBonusesInitialValues(initialValues);
   }, [standardBonuses, additionalBonuses]);
