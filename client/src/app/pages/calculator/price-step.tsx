@@ -39,7 +39,7 @@ export const PriceStep = (
   standardBonuses: Bonus[],
   additionalBonuses: Bonus[]
 ) => (
-  <FormikStep label="Cena">
+  <FormikStep label="cena">
     <Grid container spacing={2}>
       <Grid item>
         <Typography
