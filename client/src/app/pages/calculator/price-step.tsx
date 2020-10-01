@@ -8,6 +8,7 @@ import { FormikStep } from '../../common/components/formik-stepper';
 export interface Bonus {
   name: string;
   label: string;
+  value: boolean;
 }
 
 export const renderStandardBonuses = (bonuses: Bonus[]) =>

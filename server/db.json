@@ -4,37 +4,45 @@
       "standardBonuses": [
         {
           "name": "bonus1",
-          "label": "Podręcznik do pobrania"
+          "label": "Podręcznik do pobrania",
+          "value": false
         },
         {
           "name": "bonus2",
-          "label": "Ograniczona ilość uczestników"
+          "label": "Ograniczona ilość uczestników",
+          "value": false
         },
         {
           "name": "bonus3",
-          "label": "Wywiady z ekspertami"
+          "label": "Wywiady z ekspertami",
+          "value": false
         },
         {
           "name": "bonus4",
-          "label": "Transkrypcje wideo"
+          "label": "Transkrypcje wideo",
+          "value": false
         }
       ],
       "additionalBonuses": [
         {
           "name": "bonus5",
-          "label": "Zamknięta grupa"
+          "label": "Zamknięta grupa",
+          "value": false
         },
         {
           "name": "bonus6",
-          "label": "Webinary OnLine"
+          "label": "Webinary OnLine",
+          "value": false
         },
         {
           "name": "bonus7",
-          "label": "Cotygodniowe Q&A"
+          "label": "Cotygodniowe Q&A",
+          "value": false
         },
         {
           "name": "bonus8",
-          "label": "Support OnLine"
+          "label": "Support OnLine",
+          "value": false
         }
       ]
     }
