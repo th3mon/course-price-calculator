@@ -1,0 +1,42 @@
+{
+  "/api/bonuses": {
+    "get": {
+      "standardBonuses": [
+        {
+          "name": "bonus1",
+          "label": "Podręcznik do pobrania"
+        },
+        {
+          "name": "bonus2",
+          "label": "Ograniczona ilość uczestników"
+        },
+        {
+          "name": "bonus3",
+          "label": "Wywiady z ekspertami"
+        },
+        {
+          "name": "bonus4",
+          "label": "Transkrypcje wideo"
+        }
+      ],
+      "additionalBonuses": [
+        {
+          "name": "bonus5",
+          "label": "Zamknięta grupa"
+        },
+        {
+          "name": "bonus6",
+          "label": "Webinary OnLine"
+        },
+        {
+          "name": "bonus7",
+          "label": "Cotygodniowe Q&A"
+        },
+        {
+          "name": "bonus8",
+          "label": "Support OnLine"
+        }
+      ]
+    }
+  }
+}
