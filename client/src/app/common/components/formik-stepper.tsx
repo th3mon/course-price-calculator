@@ -8,9 +8,7 @@ import {
   Button,
   CircularProgress,
 } from '@material-ui/core';
-import { Form } from 'formik/dist/Form';
-import { Formik } from 'formik/dist/Formik';
-import { FormikConfig, FormikValues } from 'formik/dist/types';
+import { Formik, Form, FormikConfig, FormikValues  } from 'formik';
 
 const sleep = (time: number): Promise<void> =>
   new Promise((resolve) => setTimeout(resolve, time));
