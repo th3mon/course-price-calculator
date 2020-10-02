@@ -17,6 +17,30 @@ code {
     font-weight: bold;
   }
 
+  .card-button--primary {
+    $bgcolor: #142138;
+    background-color: $bgcolor;
+
+    &:hover {
+      background-color: $bgcolor;
+    }
+  }
+
+  .card-button--secondary {
+    $bgcolor: #fff;
+    $color: #142138;
+    color: $color;
+    background-color: $bgcolor;
+
+    &:hover {
+      background-color: $bgcolor;
+    }
+  }
+
+  .card-button--welcome {
+    padding: 20px 60px;
+  }
+
   .MuiCardContent-root {
     display: flex;
     flex-direction: column;

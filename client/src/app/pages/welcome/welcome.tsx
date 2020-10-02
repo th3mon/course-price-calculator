@@ -20,7 +20,7 @@ export const Welcome = () => (
 
         <Box className="welcome__button">
           <Link to="/calculator">
-            <Button variant="contained" color="primary">
+            <Button variant="contained" color="primary" className="card-button card-button--primary card-button--welcome">
               Przejdź do kalkulatora
             </Button>
           </Link>

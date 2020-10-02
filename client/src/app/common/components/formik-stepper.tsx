@@ -48,7 +48,7 @@ export function FormikStepper({
           await props.onSubmit(values, helpers);
           setCompleted(true);
 
-          console.log(values)
+          console.log(values);
 
           await sleep(1000);
           history.push('/');
@@ -74,20 +74,23 @@ export function FormikStepper({
               {currentChild}
 
               <Grid container spacing={2}>
-                {step > 0 ? (
-                  <Grid item>
-                    <Button
-                      disabled={isSubmitting}
-                      variant="contained"
-                      color="primary"
-                      onClick={() => setStep((step) => step - 1)}
-                    >
-                      Powrót
-                    </Button>
-                  </Grid>
-                ) : null}
                 <Grid item>
                   <Button
+                    className="card-button card-button--secondary"
+                    disabled={isSubmitting}
+                    variant="contained"
+                    color="primary"
+                    onClick={() =>
+                      step > 1 ? setStep((step) => step - 1) : history.push('/')
+                    }
+                  >
+                    Powrót
+                  </Button>
+                </Grid>
+
+                <Grid item>
+                  <Button
+                    className="card-button card-button--primary"
                     startIcon={
                       isSubmitting ? <CircularProgress size="1rem" /> : null
                     }
