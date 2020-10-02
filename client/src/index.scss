@@ -65,6 +65,27 @@ code {
     margin: 58px auto 53px;
   }
 
+  .welcome__content {
+    position: relative;
+
+    &::before {
+      position: absolute;
+      top: 50px;
+      right: -50px;
+
+      display: block;
+
+      width: 96px;
+      height: 79px;
+
+      content: '';
+      transform: matrix(-0.67, -0.59, -0.97, 0.64, 0, 0) rotate(5deg);
+
+      background: url('./images/arrow-7blue.png') no-repeat 0 0;
+      background-size: contain;
+    }
+  }
+
   .welcome__text {
     margin-top: 22px;
   }
