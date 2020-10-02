@@ -32,10 +32,7 @@ export const PriceStep = (
       <Grid item>
         <Typography
           variant="h2"
-          style={{
-            fontWeight: 'bold',
-            fontSize: '20px',
-          }}
+          className="card-header"
         >
           Standardowe bonusy
         </Typography>
@@ -45,10 +42,7 @@ export const PriceStep = (
       <Grid item>
         <Typography
           variant="h2"
-          style={{
-            fontWeight: 'bold',
-            fontSize: '20px',
-          }}
+          className="card-header"
         >
           Dodatkowe bonusy
         </Typography>

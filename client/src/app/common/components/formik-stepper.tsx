@@ -87,7 +87,7 @@ export function FormikStepper({
                       color="primary"
                       onClick={() => setStep((step) => step - 1)}
                     >
-                      Back
+                      Powrót
                     </Button>
                   </Grid>
                 ) : null}
@@ -101,7 +101,7 @@ export function FormikStepper({
                     color="primary"
                     type="submit"
                   >
-                    {isLastStep() ? 'Submit' : 'Next'}
+                    {isLastStep() ? 'Dołącz do Fabryki Kursów' : 'Dalej'}
                   </Button>
                 </Grid>
               </Grid>

@@ -10,3 +10,8 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
+
+.app .card-header {
+  font-size: 20px;
+  font-weight: bold;
+}

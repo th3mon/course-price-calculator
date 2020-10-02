@@ -46,5 +46,21 @@
         }
       ]
     }
+  },
+  "/api/target-groups": {
+    "get": [
+      {
+        "name": "beginner",
+        "label": "Osoba początkująca/student"
+      },
+      {
+        "name": "employee",
+        "label": "Pracownik etatowy zarabiający 3000 - 9000 PLN"
+      },
+      {
+        "name": "businessman",
+        "label": "Przedsiębiorca / Dobrze zarabiający pracownik etatowy"
+      }
+    ]
   }
 }
