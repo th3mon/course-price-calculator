@@ -69,14 +69,7 @@ export function FormikStepper({
               </Step>
             ))}
           </Stepper>
-          <Card
-            style={{
-              width: '80%',
-              margin: 'auto auto 50px',
-              boxShadow: '0 0 30px 0 rgba(0, 0, 0, 0.1)',
-              borderRadius: '25px',
-            }}
-          >
+          <Card>
             <CardContent>
               {currentChild}
 
