@@ -74,4 +74,11 @@ code {
 
     text-align: center;
   }
+
+  .form-buttons {
+    display: flex;
+    place-content: space-between;
+
+    margin-top: 20px;
+  }
 }

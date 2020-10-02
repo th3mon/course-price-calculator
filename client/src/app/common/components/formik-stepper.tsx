@@ -73,7 +73,7 @@ export function FormikStepper({
             <CardContent>
               {currentChild}
 
-              <Grid container spacing={2}>
+              <Grid container className="form-buttons">
                 <Grid item>
                   <Button
                     className="card-button card-button--secondary"
