@@ -18,6 +18,10 @@ export const App: React.FunctionComponent = () => (
             <Calculator />
           </Route>
         </Switch>
+
+        <Route path="*">
+          <Redirect to="/"/>
+        </Route>
       </main>
     </div>
   </BrowserRouter>
