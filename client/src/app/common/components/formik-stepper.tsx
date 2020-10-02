@@ -48,6 +48,8 @@ export function FormikStepper({
           await props.onSubmit(values, helpers);
           setCompleted(true);
 
+          console.log(values)
+
           await sleep(1000);
           history.push('/');
         } else {
