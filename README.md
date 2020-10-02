@@ -30,3 +30,5 @@ https://github.com/testing-library/react-testing-library/issues/610.
 - Add the Money Counter
 - Add the Tooltips
 - Style the whole app to be consistent with the design
+- Add error handling
+- Fix tests
