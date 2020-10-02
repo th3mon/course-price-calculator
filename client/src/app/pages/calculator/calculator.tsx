@@ -4,6 +4,7 @@ import { FormikStepper } from '../../common/components/formik-stepper';
 import { Bonus, PriceStep } from './price-step';
 import { FormikValues } from 'formik';
 import { TargetGroupsStep } from './target-groups-step';
+import { CourseContents, CourseContentsStep } from './course-contents-step';
 
 const convertToInitialValues = (bonuses: Bonus[]): FormikValues =>
   bonuses.reduce(
@@ -19,6 +20,11 @@ export const Calculator: React.FunctionComponent = () => {
   const [additionalBonuses, setAdditionalBonuses] = useState([]);
   const [bonusesInitialValues, setBonusesInitialValues] = useState({});
   const [targetGroups, setTargetGroups] = useState([]);
+  const [courseContents, setCourseContents] = useState<CourseContents | null>(null);
+  const [
+    courseContentsInitialValues,
+    setCourseContentsInitialValues,
+  ] = useState({});
 
   useEffect(() => {
     async function getBonuses() {
@@ -26,6 +32,12 @@ export const Calculator: React.FunctionComponent = () => {
 
       setStandardBonuses(data.standardBonuses);
       setAdditionalBonuses(data.additionalBonuses);
+      setBonusesInitialValues(
+        convertToInitialValues([
+          ...data.standardBonuses,
+          ...data.additionalBonuses,
+        ])
+      );
     }
 
     async function getTargetGroups() {
@@ -34,30 +46,39 @@ export const Calculator: React.FunctionComponent = () => {
       setTargetGroups(data);
     }
 
+    async function getCourseContents() {
+      const { data } = await axios.get('/api/course-contents');
+
+      setCourseContents(data);
+
+      setCourseContents(data => {
+        console.log(data)
+        return data;
+      });
+
+      setCourseContentsInitialValues(
+        convertToInitialValues([...data.leftColumn, ...data.rightColumn])
+      );
+    }
+
     getBonuses();
     getTargetGroups();
+    getCourseContents();
   }, []);
-
-  useEffect(() => {
-    setBonusesInitialValues(
-      convertToInitialValues([
-        ...standardBonuses,
-        ...additionalBonuses,
-      ])
-    );
-  }, [standardBonuses, additionalBonuses]);
 
   return (
     <FormikStepper
       enableReinitialize={true}
       initialValues={{
         ...bonusesInitialValues,
-        targetGroup: ''
+        targetGroup: '',
+        ...courseContentsInitialValues,
       }}
       onSubmit={() => {}}
     >
       {PriceStep(standardBonuses, additionalBonuses)}
       {TargetGroupsStep(targetGroups)}
+      {CourseContentsStep(courseContents)}
     </FormikStepper>
   );
 };

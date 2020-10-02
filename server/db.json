@@ -62,5 +62,63 @@
         "label": "Przedsiębiorca / Dobrze zarabiający pracownik etatowy"
       }
     ]
+  },
+  "/api/course-contents": {
+    "get": {
+      "leftColumn": [
+        {
+          "name": "course-content-1",
+          "label": "Limitowana ilość dostępów",
+          "value": false
+        },
+        {
+          "name": "course-content-2",
+          "label": " Dodatkowi instruktorzy (gwiazda)",
+          "value": false
+        },
+        {
+          "name": "course-content-3",
+          "label": "Transkrypcja video",
+          "value": false
+        },
+        {
+          "name": "course-content-4",
+          "label": "Online Community",
+          "value": false
+        },
+        {
+          "name": "course-content-5",
+          "label": "In Person Networking Event",
+          "value": false
+        }
+      ],
+      "rightColumn": [
+        {
+          "name": "course-content-6",
+          "label": "Tygodniowe Q&A",
+          "value": false
+        },
+        {
+          "name": "course-content-7",
+          "label": "Miesięczne Q&A",
+          "value": false
+        },
+        {
+          "name": "course-content-8",
+          "label": "Profesjonalna Produkcja",
+          "value": false
+        },
+        {
+          "name": "course-content-9",
+          "label": "Konsultacje 1:1",
+          "value": false
+        },
+        {
+          "name": "course-content-10",
+          "label": "Sprawdzanie pracy przez instruktora",
+          "value": false
+        }
+      ]
+    }
   }
 }

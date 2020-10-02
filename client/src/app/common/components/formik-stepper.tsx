@@ -71,7 +71,7 @@ export function FormikStepper({
           </Stepper>
           <Card
             style={{
-              width: '50%',
+              width: '80%',
               margin: 'auto auto 50px',
               boxShadow: '0 0 30px 0 rgba(0, 0, 0, 0.1)',
               borderRadius: '25px',
