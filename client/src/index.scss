@@ -65,13 +65,13 @@ code {
     margin: 58px auto 53px;
   }
 
-  .welcome__content {
+  .welcome__header {
     position: relative;
 
     &::before {
       position: absolute;
-      top: 50px;
-      right: -50px;
+      top: -10px;
+      right: -70px;
 
       display: block;
 
