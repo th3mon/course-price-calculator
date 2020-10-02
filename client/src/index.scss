@@ -53,11 +53,16 @@ code {
     display: flex;
     place-content: center;
 
-    width: 80%;
+    max-width: 740px;
     margin: auto auto 50px;
 
     border-radius: 25px;
     box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.1);
+  }
+
+  .MuiStepper-root {
+    max-width: 880px;
+    margin: auto;
   }
 
   .app-header {
