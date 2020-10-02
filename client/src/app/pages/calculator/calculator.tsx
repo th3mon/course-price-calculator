@@ -5,7 +5,7 @@ import { Bonus, PriceStep } from './price-step';
 import { FormikValues } from 'formik';
 import { TargetGroupsStep } from './target-groups-step';
 
-const convertBonusesToBonusInitialValues = (bonuses: Bonus[]): FormikValues =>
+const convertToInitialValues = (bonuses: Bonus[]): FormikValues =>
   bonuses.reduce(
     (obj: FormikValues, item: Bonus) => ({
       ...obj,
@@ -39,12 +39,12 @@ export const Calculator: React.FunctionComponent = () => {
   }, []);
 
   useEffect(() => {
-    const initialValues = convertBonusesToBonusInitialValues([
-      ...standardBonuses,
-      ...additionalBonuses,
-    ]);
-
-    setBonusesInitialValues(initialValues);
+    setBonusesInitialValues(
+      convertToInitialValues([
+        ...standardBonuses,
+        ...additionalBonuses,
+      ])
+    );
   }, [standardBonuses, additionalBonuses]);
 
   return (
